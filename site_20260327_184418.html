@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akta Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .header {
+            background-color: #ff0033;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-weight: 600;
+            font-size: 24px;
+            margin: 0;
+        }
+        .nav {
+            background-color: #ff0033;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            transition: color 0.2s ease;
+        }
+        .nav a:hover {
+            color: #ccc;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .content h2 {
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #ff0033;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media only screen and (max-width: 600px) {
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Akta Restaurant</h1>
+    </div>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="content">
+        <h2>Welcome to Akta Restaurant</h2>
+        <p>We offer a wide variety of delicious dishes, from traditional Bangla cuisine to modern fusion dishes. Our chefs use only the freshest ingredients to create dishes that are both flavorful and visually appealing.</p>
+        <h2>Our Menu</h2>
+        <p>We have a wide range of dishes to choose from, including vegetarian, non-vegetarian, and vegan options. Our menu is designed to cater to all tastes and dietary requirements.</p>
+    </div>
+    <div class="footer">
+        Powered by PSP Digital Services
+    </div>
+    <script>
+        // Add event listener to nav links
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Add animation to nav links
+                link.style.color = '#ccc';
+                setTimeout(() => {
+                    link.style.color = '#fff';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
