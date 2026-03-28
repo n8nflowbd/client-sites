@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Satyajit Paul MD Cardiology & Diabetes Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0fff;
+        }
+        .chambers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .chamber {
+            margin: 20px;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            width: calc(33.33% - 40px);
+        }
+        .chamber h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0fff;
+            margin-bottom: 10px;
+        }
+        .chamber p {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .booking {
+            text-align: center;
+        }
+        .booking button {
+            padding: 10px 20px;
+            background-color: #0fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .booking button:hover {
+            background-color: #0fffcf;
+        }
+        .date-time {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .date-time select {
+            padding: 10px;
+            margin: 10px;
+            background-color: #2a2a2a;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1a1a1a;
+            clear: both;
+        }
+        @media only screen and (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+            }
+            .chamber {
+                width: calc(50% - 40px);
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .container {
+                margin: 10px auto;
+            }
+            .chamber {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dr. Satyajit Paul MD Cardiology & Diabetes Specialist</h1>
+        </div>
+        <div class="chambers">
+            <div class="chamber">
+                <h2>Chamber 1: Apollo Clinic Panihati</h2>
+                <p>Address: Apollo Clinic Panihati, Kolkata</p>
+            </div>
+            <div class="chamber">
+                <h2>Chamber 2: City Hospital Sodepur</h2>
+                <p>Address: City Hospital Sodepur, Kolkata</p>
+            </div>
+            <div class="chamber">
+                <h2>Chamber 3: Wellness Center Khardah</h2>
+                <p>Address: Wellness Center Khardah, Kolkata</p>
+            </div>
+        </div>
+        <div class="booking">
+            <h2>Book an Appointment</h2>
+            <div class="date-time">
+                <select name="date" id="date">
+                    <option value="">Select Date</option>
+                    <option value="2024-09-16">16-09-2024</option>
+                    <option value="2024-09-17">17-09-2024</option>
+                    <option value="2024-09-18">18-09-2024</option>
+                </select>
+                <select name="time" id="time">
+                    <option value="">Select Time</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                </select>
+            </div>
+            <button>Book Now</button>
+            <a href="https://wa.me/1234567890" target="_blank" style="text-decoration: none; color: #0fff; font-size: 18px; font-weight: 600; margin-top: 10px; display: inline-block;">Book via WhatsApp</a>
+        </div>
+    </div>
+    <footer>
+        <p>Powered by PSP Digital Services</p>
+    </footer>
+    <script>
+        // Add event listener to book now button
+        document.querySelector('.booking button').addEventListener('click', function() {
+            // Get selected date and time
+            var date = document.getElementById('date').value;
+            var time = document.getElementById('time').value;
+            // Check if date and time are selected
+            if (date !== '' && time !== '') {
+                // Open WhatsApp with pre-filled message
+                var whatsappUrl = 'https://wa.me/1234567890?text=Book%20an%20appointment%20on%20' + date + '%20at%20' + time;
+                window.open(whatsappUrl, '_blank');
+            } else {
+                alert('Please select date and time');
+            }
+        });
+    </script>
+</body>
+</html>
